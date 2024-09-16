@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+      // Get all sections with an ID (About, Services, Feedback)
+const sections = document.querySelectorAll('section');
+
+// Get all nav links
+const navLinks = document.querySelectorAll('nav ul li a');
+
+// Function to handle scroll event
+window.addEventListener('scroll', () => {
+    let scrollPosition = window.scrollY;
+
+    // Loop through sections to determine which one is currently in view
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+
+        if (scrollPosition >= sectionTop - sectionHeight / 3 && scrollPosition < sectionTop + sectionHeight) {
+            const currentId = section.getAttribute('id');
+
+            // Remove 'active' class from all nav links
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+
+            // Add 'active' class to the nav link that matches the current section
+            navLinks.forEach(link => {
+                if (link.getAttribute('href').includes(currentId)) {
+                    link.classList.add('active');
+                }
+            });
+        }
+    });
+});
+
+
+    </script>
+    
+</head>
+<body>
+         <!-- navigation bar -->
+          <section id="home">
+    <nav class="navigation">
+        <h1>Project Parampara</h1>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#services" class="nav-link">Services</a></li>
+            <li><a href="#feedback" class="nav-link">Feedback</a></li>
+        </ul>
+        <button >
+            <a href="https://wa.meta/+919392409489?text=hello">
+            <i class="material-icons">&#xe0b0;</i>
+            <h3>+91 1234567890</h3>
+            </a>
+        </button>
+    </nav>
+    </section>
+
+         <!-- hero section      -->
+    <div class="container">
+        <div class="content">
+            <h1>Hello..! Welcome To All</h1>
+            <h2>Project Parampara ....</h2>
+            <button><p><a href="#services">Go your Menus</a></p></button>
+        </div>
+    </div>
+
+        <!-- about menu items          -->
+    <section id="about">
+    
+        <h1>About Menus</h1>
+        <div class="about_row">
+            <button >
+                <a href="#noodels">
+                <div class="about_col">
+                    <div class="img">
+                        <img src="about9.jpeg" alt="noodels">
+                    </div>
+                    <div class="text">
+                        <p>Noodels</p>
+                    </div>
+                </div>
+                </a>
+            </button>
+
+            <button>
+                <a href="#manchurian">
+                <div class="about_col">
+                    <div class="img">
+                        <img src="about8.webp">
+                    </div>
+                    <div class="text">
+                        <p>Manchurian</p>
+                    </div>
+                </div>
+                </a>
+            </button>
+
+        <button>
+            <a href="#starters">
+            <div class="about_col">
+                <div class="img">
+                    <img src="about10.jpg">
+                </div>
+                <div class="text">
+                    <p>Veg Starters</p>
+                </div>
+            </div>
+            </a>
+        </button>
+
+            <button>
+                <a href="#manchurian">
+                <div class="about_col">
+                    <div class="img">
+                        <img src="about4.jpeg">
+                    </div>
+                    <div class="text">
+                        <p>Non Veg Starters</p>
+                    </div>
+                </div>
+                </a>
+            </button>
+
+            <button>
+                <a href="#starters">
+                <div class="about_col">
+                    <div class="img">
+                        <img src="about7.webp" alt="noodels">
+                    </div>
+                    <div class="text">
+                        <p>Biryani</p>
+                    </div>
+                </div>
+                </a>
+            </button>
+        </div>
+    </section>
+
+            <!-- item cards               -->
+    <section class="item_cards" id="services">
+        <h1>Menu List</h1>
+    
+
+        <div class="item_row">
+<!-- 1st -->
+        <div id="noodels">
+            <div class="item_col">
+                <div class="img">
+                    <img src="about4.jpeg" alt="xxxx" >
+                </div>
+                <div class="text">
+                    <h2>Veg Noodels</h2>
+                    <h3>Price : $70</h3>
+                
+                    <div class="rating">
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+
+                </div>
+                    <div class="buy_button">
+                        <h4>Buy Now</h4>
+                    </div>
+             </div>
+<!-- 2nd -->
+            <div class="item_col">
+                <div class="img">
+                    <img src="about10.jpg" alt="xxxx">
+                </div>
+                <div class="text">
+                    <h2> paneer pieces</h2>
+                    <h3>Price : $80</h3>
+
+                    <div class="rating">
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+                <div class="buy_button">
+                    <h4>Buy Now</h4>
+                </div>
+            </div>
+<!-- 3rd -->
+            <div class="item_col">
+                <div class="img">
+                    <img src="about7.webp" alt="xxxx">
+                </div>
+                <div class="text">
+                    <h2>Dum Biryani</h2>
+                    <h3>Price : $120</h3>
+                
+                    <div class="rating">
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                    </div>
+
+                </div>
+                    <div class="buy_button">
+                        <h4>Buy Now</h4>
+                    </div>
+             </div>
+        </div>
+<!-- 4th -->
+        <div id="manchurian">
+            <div class="item_col">
+                <div class="img">
+                    <img src="about2.jpg" alt="xxxx">
+                </div>
+                <div class="text">
+                    <h2>Veg Manchurian</h2>
+                    <h3>Price : $70</h3>
+
+                    <div class="rating">
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+                <div class="buy_button">
+                    <h4>Buy Now</h4>
+                </div>
+            </div>
+<!-- 5th -->
+            <div class="item_col">
+                <div class="img">
+                    <img src="about8.webp" alt="xxxx">
+                </div>
+                <div class="text">
+                    <h2>Non veg Starters</h2>
+                    <h3>Price : $90</h3>
+
+                    <div class="rating">
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star "></i>
+                    </div>
+                </div>
+                <div class="buy_button">
+                    <h4>Buy Now</h4>
+                </div>
+            </div>
+
+<!-- 6th -->
+            <div class="item_col">
+                <div class="img">
+                    <img src="about6.jpeg" alt="xxxx">
+                </div>
+                <div class="text">
+                    <h2>Paneer</h2>
+                    <h3>Price : $70</h3>
+                
+                    <div class="rating">
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+
+                </div>
+                    <div class="buy_button">
+                        <h4>Buy Now</h4>
+                    </div>
+             </div>
+        </div>
+
+<!-- 7th -->
+        <div id="starters">
+             <div class="item_col">
+                <div class="img">
+                    <img src="about8.webp" alt="xxxx">
+                </div>
+                <div class="text">
+                    <h2>Biryani</h2>
+                    <h3>Price : $160</h3>
+                
+                    <div class="rating">
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                    </div>
+
+                </div>
+                    <div class="buy_button">
+                        <h4>Buy Now</h4>
+                    </div>
+             </div>
+
+<!-- 8th -->
+             <div class="item_col">
+                <div class="img">
+                    <img src="about7.webp" alt="xxxx">
+                </div>
+                <div class="text">
+                    <h2>Dum Biryani</h2>
+                    <h3>Price : $120</h3>
+                
+                    <div class="rating">
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+
+                </div>
+                    <div class="buy_button">
+                        <h4>Buy Now</h4>
+                    </div>
+             </div>
+<!-- 9th -->
+             <div class="item_col">
+                <div class="img">
+                    <img src="about3.jpeg" alt="xxxx">
+                </div>
+                <div class="text">
+                    <h2>Paneer Staters</h2>
+                    <h3>Price : $100</h3>
+                
+                    <div class="rating">
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+
+                </div>
+                    <div class="buy_button">
+                        <h4>Buy Now</h4>
+                    </div>
+             </div>
+        </div>
+<!-- 10th -->
+             <div class="item_col">
+                <div class="img">
+                    <img src="about5.jpeg" alt="xxxx">
+                </div>
+                <div class="text">
+                    <h2>Mandi</h2>
+                    <h3>Price : $140</h3>
+                
+                    <div class="rating">
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+
+                </div>
+                    <div class="buy_button">
+                        <h4>Buy Now</h4>
+                    </div>
+             </div>
+<!-- 11th -->
+             <div class="item_col">
+                <div class="img">
+                    <img src="about6.jpeg" alt="xxxx">
+                </div>
+                <div class="text">
+                    <h2>Veg Starters</h2>
+                    <h3>Price : $90</h3>
+                
+                    <div class="rating">
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star checked"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+
+                </div>
+                    <div class="buy_button">
+                        <h4>Buy Now</h4>
+                    </div>
+             </div>
+
+
+        </div>
+    </section>
+
+
+              <!-- Feedback -->
+    <section class="feedback_container" id="feedback">
+        <h1>Feedback form</h1>
+        <div class="feed_row">
+            <!-- <div class="feed_col col1">
+                <div class="address">
+                    <p> Savitha nagar, district prakasam, andhra pradesh</p>
+                </div>
+                <div class="mail">
+                    <p>projectparampara@gmail.com</p>
+                </div>
+                <div class="phone">
+                    <p>+91 123456789</p>
+                </div>
+            </div> -->
+            <img src="feedback.jpg">
+            <div class="feed_col col2">
+                <form>
+                    <h1>Feedback</h1>
+                    <input type="text" placeholder="Enter name......." required>
+                    <input type="email" placeholder="E-mail......" required>
+                    <input type="tel" placeholder="Phone Number......"><br><br>
+                    <h4><label>Give Your Rating</label></h4><br><br>
+                    <input type="checkbox" id="5s">
+                    <label for="5s">1 <sup>st  </sup> <i class="fa fa-star checked"> </i></label>
+                    <input type="checkbox" id="4s">
+                    <label for="4s">2 <sup>st</sup> <i class="fa fa-star checked"></i></label>
+                    <input type="checkbox" id="3s">
+                    <label for="3s">3 <sup>st</sup> <i class="fa fa-star checked"></i></label>
+                    <input type="checkbox" id="2s">
+                    <label for="2s">4 <sup>st</sup> <i class="fa fa-star checked"></i></label>
+                    <input type="checkbox" id="1s">
+                    <label for="1s">5 <sup>st</sup> <i class="fa fa-star checked"></i></label><br><br>
+                    <!-- <textarea col="9" rows="8" placeholder="comments ....."></textarea> -->
+
+                    <br><br>
+                    <button>submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+<!-- question and answerd -->
+    <div class="question_container">
+
+        <h2>Frequently Asked Question</h2>
+<div class="center_question">
+        <div class="faq_item">
+            <input type="checkbox"class="toggle" id="faq1">
+            <label for="faq1" class="faq_header">
+                <span>Is It Tasty To Eat ?</span>
+                <span class="icon"></span>
+            </label>
+            <div class="faq_content">
+                OF course is is very much of good taste.
+            </div>
+        </div>
+
+        <div class="faq_item">
+            <input type="checkbox"class="toggle" id="faq2">
+            <label for="faq2" class="faq_header">
+                <span>Which food items are you delevered ?</span>
+                <span class="icon"></span>
+            </label>
+            <div class="faq_content">
+                We provide all type of food items like paneer, fast foods, and Biryani items.
+            </div>
+        </div>
+
+        <div class="faq_item">
+            <input type="checkbox"class="toggle" id="faq3">
+            <label for="faq3" class="faq_header">
+                <span>Will you provide all Veg or Non Veg items ?</span>
+                <span class="icon"></span>
+            </label>
+            <div class="faq_content">
+                Yes, We will provide all type of food items.
+            </div>
+        </div>
+        
+    </div>
+
+
+    </div>
+
+       <!-- footer page -->
+<footer>
+    <div class="footer">
+        <div class="icons">
+            <i class="fa fa-github"></i>
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-google"></i>
+            <i class="fa fa-youtube"></i>
+        </div>
+        <div class="footer_nav">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer_bottom">
+        <p>copyRight by project Parampara Team</p>
+    </div>
+
+    </footer>
+
+
+
+
+
+</body>
+</html>
